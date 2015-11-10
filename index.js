@@ -32,7 +32,7 @@ var Widget = sequelize.define('Widget', {
         return Sequelize.Promise.reject(new Error('userId required in options for create or update'));
       }
 
-      console.log(widget.changed());
+      console.log('beforeValidate changed columns:', widget.changed());
       widget.name = widget.name + ' hello';
 
       if (!widget.createdById) {
