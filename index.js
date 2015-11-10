@@ -33,6 +33,7 @@ var Widget = sequelize.define('Widget', {
       }
 
       console.log(widget.changed());
+      widget.name = widget.name + ' hello';
 
       if (!widget.createdById) {
         widget.createdById = options.userId;
